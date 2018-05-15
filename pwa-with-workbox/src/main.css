@@ -11,23 +11,6 @@ body {
   color: #ccc;
 }
 
-.main-text {
-  white-space: nowrap;
-}
-
-img {
-  width: auto;
-  max-width: 80%;
-  margin-top: 50px;
-}
-
-.revision {
-  font-weight: 200;
-  position: fixed;
-  top: 32px;
-  left: 32px;
-}
-
 .notification {
   position: absolute;
   top: 0;
@@ -59,3 +42,4 @@ img {
 .network-message #network-status {
   font-weight: bold;
 }
+

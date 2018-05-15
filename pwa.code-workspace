@@ -2,6 +2,12 @@
 	"folders": [
 		{
 			"path": "pwa-base"
+		},
+		{
+			"path": "pwa-with-workbox"
+		},
+		{
+			"path": "pwa-with-lavas"
 		}
 	]
 }
