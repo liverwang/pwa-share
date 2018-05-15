@@ -1,0 +1,15 @@
+{
+  "name": "Base Sampe for PWA",
+  "short_name": "PWA Demo",
+  "display": "standalone",
+  "start_url": "/",
+  "theme_color": "#313131",
+  "background_color": "#313131",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    }
+  ]
+}

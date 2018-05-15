@@ -1,0 +1,60 @@
+<head>
+  <title>Base Sample for PWA</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="icon" href="/icon.png" type="image/png" />
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <div class="revision">天气：
+    <span id="request-temp"></span>
+  </div>
+  <div class="main-text">
+    This is a sample for Progressive Web App
+  </div>
+
+  <img src="icon.png">
+
+  <div class="network-message">
+    Network:
+    <span id="network-status">Good</span>
+  </div>
+
+  <script type="text/javascript">
+    if (navigator.serviceWorker != null) {
+      navigator.serviceWorker.register('./service-worker.js?_t=' + (+new Date()))
+        .then(function (registration) {
+          console.log('Registered events at scope: ', registration.scope);
+        });
+    }
+
+    var statusEl = document.getElementById('network-status')
+
+    window.addEventListener('offline', () => {
+      statusEl.innerText = 'Offline'
+    })
+
+    window.addEventListener('online', () => {
+      statusEl.innerText = 'Online'
+    })
+
+    if (!navigator.onLine) {
+      statusEl.innerText = 'Offline'
+    }
+
+    const url = 'https://query.yahooapis.com/v1/public/yql?q=select%20item.condition%20from%20weather.forecast%20where%20woeid%20%3D%202151849&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys';
+    axios.get(url)
+      .then(function (response) {
+        const condition = response.data.query.results.channel.item.condition
+        const date = `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDate()}`
+        const result = `${date}, ${condition.temp}℉, ${Math.round((condition.temp-32)/1.8)}℃, ${condition.text}`
+        let tempEl = document.getElementById('request-temp')
+        tempEl.innerText = result
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  </script>
+</body>

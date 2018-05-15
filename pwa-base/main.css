@@ -1,0 +1,36 @@
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Helvetica Neue;
+  font-weight: 200;
+  font-size: 20px;
+  background-color: #313131;
+  color: #ccc;
+}
+
+.main-text {
+  white-space: nowrap;
+}
+
+img {
+  width: auto;
+  max-width: 80%;
+  margin-top: 50px;
+}
+
+.revision {
+  font-weight: 200;
+  position: fixed;
+  top: 32px;
+  left: 32px;
+}
+
+.network-message {
+  font-weight: 200;
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+}
