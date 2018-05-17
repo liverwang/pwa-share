@@ -12,4 +12,4 @@ workbox.routing.registerRoute(
   workbox.strategies.staleWhileRevalidate()
 )
 
-workbox.precaching.precacheAndRoute(self.__precacheManifest)
+workbox.precaching.precacheAndRoute(self.__precacheManifest || [])

@@ -1,5 +1,6 @@
 import styles from './main.css'
 
+// 数据源请求
 const API = 'https://liverwang.github.io/pwa-share/data.json'
 let weatherStatus = document.getElementById('weather-status')
 
@@ -7,13 +8,11 @@ fetch(API).then(response => {
   return response.json()
 }).then(data => {
   let topicWrapper = document.getElementById('topic-list')
-  let topicList = document.createElement('ul')
   data.map((news, index) => {
-    let topicItem = document.createElement('ol')
+    let topicItem = document.createElement('div')
     topicItem.innerText = `${index+1}. ${news.title}` 
-    topicList.appendChild(topicItem)
+    topicWrapper.appendChild(topicItem)
   })
-  topicWrapper.appendChild(topicList)
 })
 
 var statusEl = document.getElementById('network-status')
@@ -41,9 +40,9 @@ if (!navigator.onLine) {
 }
 
 // 注册service-worker
-if (navigator.serviceWorker != null) {
-  navigator.serviceWorker.register('./service-worker.js')
-    .then(function (registration) {
-      console.log('service-worker regist success at scope: ', registration.scope);
-    });
-}
+// if (navigator.serviceWorker != null) {
+//   navigator.serviceWorker.register('./service-worker.js')
+//     .then(function (registration) {
+//       console.log('service-worker regist success at scope: ', registration.scope);
+//     });
+// }
