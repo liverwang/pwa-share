@@ -7,8 +7,8 @@ PWA学习过程中的Demo
 写一个简单的PWA应用：https://zhuanlan.zhihu.com/p/25459319
 
 ## pwa-with-workbox
-基于workbox-webpack-plugin、sw-register-webpack-plugin等自动化工具实现离线应用
-workbox：https://developers.google.cn/web/tools/workbox/
+基于workbox-webpack-plugin、sw-register-webpack-plugin等自动化工具实现离线应用 
+workbox：https://developers.google.cn/web/tools/workbox/ 
 sw-register：https://github.com/lavas-project/sw-register-webpack-plugin
 
 ## pwa-with-lavas
