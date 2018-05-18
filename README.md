@@ -1,37 +1,16 @@
-## Welcome to GitHub Pages
+## Welcome to PWA Demo
 
-You can use the [editor on GitHub](https://github.com/liverwang/pwa-share/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+PWA学习过程中的Demo
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## pwa-base
+使用最基础的service-worker的注册、安装、激活，实现基本的离线应用
+写一个简单的PWA应用：https://zhuanlan.zhihu.com/p/25459319
 
-### Markdown
+## pwa-with-workbox
+基于workbox-webpack-plugin、sw-register-webpack-plugin等自动化工具实现离线应用
+workbox：https://developers.google.cn/web/tools/workbox/
+sw-register：https://github.com/lavas-project/sw-register-webpack-plugin
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## pwa-with-lavas
+基于Lavas构建的pwa应用：https://lavas.baidu.com/
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/liverwang/pwa-share/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
