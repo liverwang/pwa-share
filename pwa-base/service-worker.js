@@ -2,7 +2,7 @@
 const SW_PRECACHE_KEY = 'SW_PRECACHE_KEY'
 const SW_RUNTIME_CACHE_KEY = 'SW_RUNTIME_CACHE_KEY'
 // 缓存静态资源内容
-const SW_CACHE_LIST = ['/', 'index.html', 'main.css', 'icon.png', 'manifest.json']
+const SW_CACHE_LIST = ['index.html', 'main.css', 'icon.png', 'manifest.json']
 
 // 安装：新建缓存SW_PRECACHE_KEY，提取SW_CACHE_LIST资源写入缓存
 self.addEventListener('install', function (e) {
