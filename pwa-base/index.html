@@ -68,29 +68,5 @@
       let tempEl = document.getElementById('weather-status')
       tempEl.innerText = result
     })
-
-
-    const myHeaders = new Headers()
-    myHeaders.append('Content-Type', 'application/json')
-
-    // 数据源请求
-    const dataUrl = './data.json'
-    let weatherStatus = document.getElementById('weather-status')
-
-    let dataRequest = new Request(dataUrl, {
-      method: 'POST',
-      mode: 'cors',
-      body: JSON.stringify({}),
-      headers: myHeaders
-    })
-
-    fetch(dataRequest)
-      .then(response => {
-        return response.json()
-      })
-      .then(data => {
-        console.log(data)
-      })
-
   </script>
 </body>
